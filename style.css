@@ -1,0 +1,136 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #00f2fe;
+    --bg-dark: #080a12;
+    --card-bg: #111420;
+    --text-white: #ffffff;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(8, 10, 18, 0.95);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo { font-size: 25px; font-weight: 700; }
+.logo span { color: var(--primary-color); }
+
+nav ul li { display: inline-block; list-style: none; margin: 0 15px; }
+nav ul li a { text-decoration: none; color: white; transition: 0.3s; }
+nav ul li a:hover { color: var(--primary-color); }
+
+.nav-btn {
+    background: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 { font-size: 3.5rem; margin: 15px 0; }
+.hero h1 span { color: var(--primary-color); }
+.hero p { max-width: 600px; color: #ccc; margin-bottom: 25px; }
+
+.btn-primary {
+    padding: 12px 25px;
+    background: var(--primary-color);
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    padding: 12px 25px;
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Sections */
+section { padding: 100px 8%; }
+.title { text-align: center; font-size: 35px; margin-bottom: 50px; }
+.title span { color: var(--primary-color); }
+
+/* Services */
+.container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+.card:hover { border-color: var(--primary-color); transform: translateY(-10px); }
+.card i { font-size: 40px; color: var(--primary-color); margin-bottom: 15px; }
+
+/* Skills Progress */
+.skills-grid { max-width: 700px; margin: auto; }
+.skill-item { margin-bottom: 20px; }
+.info { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.bar { background: #333; height: 10px; border-radius: 10px; }
+.line { height: 100%; border-radius: 10px; background: var(--primary-color); box-shadow: 0 0 10px var(--primary-color); }
+
+.html { width: 95%; } .js { width: 80%; } .react { width: 75%; } .python { width: 65%; }
+
+/* Portfolio */
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.work {
+    height: 250px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+}
+.layer {
+    position: absolute; width: 100%; height: 0; background: linear-gradient(transparent, #00f2fe);
+    bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    transition: 0.5s; overflow: hidden;
+}
+.work:hover .layer { height: 100%; }
+.layer h3 { color: #000; }
+
+/* Footer */
+footer { padding: 50px 8% 20px; background: #05060a; text-align: center; }
+.social-links a { font-size: 25px; color: var(--primary-color); margin: 0 15px; transition: 0.3s; }
+.social-links a:hover { color: white; }
+hr { margin: 30px 0; border: 0; border-top: 1px solid #222; }
+.copy { font-size: 14px; color: #777; }
